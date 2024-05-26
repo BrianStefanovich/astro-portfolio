@@ -1,0 +1,43 @@
+---
+import Badge from "../Badge.astro";
+
+interface Props {
+    date?: string;
+    url?: string;
+    title?: string;
+    description?: string;
+    technologies?: string[];
+}
+
+const { date, title, description, technologies, url } = Astro.props;
+---
+
+<div class="grid grid-cols-4 gap-P md:grid-cols-8 mt-H6">
+    <div class="col-start-1 col-span-1 md:col-start-2 text-right">
+        <small class="text-gray-30 font-hind font-bold text-SMALL">
+            {date}
+        </small>
+    </div>
+    <div class="col-span-3 md:col-span-5">
+        <a
+            title={title}
+            target="_blank"
+            href={url}
+            class="text-gray-20 text-P font-hind font-bold hover:text-tertiary-40 hover:translate-y-[-4px] transition-all ease-in-out"
+        >
+            {title}
+        </a>
+        <p class="text-gray-10 text-PSMALL font-hind mt-P">
+            {description}
+        </p>
+        {
+            technologies && (
+                <div class="flex flex-wrap mt-H6">
+                    {technologies.map((technology) => (
+                        <Badge label={technology} />
+                    ))}
+                </div>
+            )
+        }
+    </div>
+</div>

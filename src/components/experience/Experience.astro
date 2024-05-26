@@ -1,0 +1,21 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+---
+
+<div class="mt-H2">
+    <div class="grid grid-cols-4 gap-P md:grid-cols-8">
+        <h6
+            class="col-span-4 md:col-start-2 md:col-span-6 font-hind text-gray-10 font-bold text-H6"
+        >
+            Experience
+        </h6>
+    </div>
+
+    <ExperienceItem
+        date="20023 - Present"
+        title="Senior Engineer, CrunchLoop"
+        description="Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility."
+        technologies={[".NET", "React"]}
+        url="google.com"
+    />
+</div>

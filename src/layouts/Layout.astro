@@ -1,5 +1,6 @@
 ---
 import { SEO } from "astro-seo";
+import Contact from "../components/Contact.astro";
 interface Props {
 	title: string;
 }
@@ -54,7 +55,8 @@ const { title } = Astro.props;
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body class="p-P bg-gray-90">
+		<Contact />
 		<slot />
 	</body>
 </html>

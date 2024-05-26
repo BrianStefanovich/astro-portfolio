@@ -12,13 +12,13 @@ interface Props {
 const { date, title, description, technologies, url } = Astro.props;
 ---
 
-<div class="grid grid-cols-4 gap-P md:grid-cols-8 mt-H6">
-    <div class="col-start-1 col-span-1 md:col-start-2 text-right">
+<div class="grid grid-cols-4 gap-P md:grid-cols-8 lg:grid-cols-12 mt-H6">
+    <div class="col-start-1 col-span-1 md:col-start-2 lg:col-start-3 text-right">
         <small class="text-gray-30 font-hind font-bold text-SMALL">
             {date}
         </small>
     </div>
-    <div class="col-span-3 md:col-span-5">
+    <div class="col-span-3 md:col-span-5 lg:col-span-7">
         <a
             title={title}
             target="_blank"

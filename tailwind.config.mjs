@@ -82,6 +82,10 @@ export default {
 				TINY: '6.11px',
 			}
 		},
+		screens: {
+			'md': '960px',
+			'lg': '1280px'
+		}
 	},
 	plugins: [],
 }

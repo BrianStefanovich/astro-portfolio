@@ -3,12 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro"
 import Experience from "../components/experience/Experience.astro";
 import Projects from "../components/projects/Projects.astro";
+import Videos from "../components/videos/Videos.tsx"
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Brian Stefanovich">
 	<main>
 		<Hero />
 		<Projects />
 		<Experience />
+		<Videos client:load/>
 	</main>
 </Layout>
